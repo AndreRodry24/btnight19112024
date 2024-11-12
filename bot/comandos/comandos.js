@@ -873,7 +873,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}antlink* - Liga/desliga o antilink e apaga a mensagem de quem postar qualquer tipo de link.\n`,
                 msgs: {
                     motivo: "Banido pelo ANTI-LINK",
-                    detectou: "@{p1}, link detectado na sua mensagem. Por segurança, você foi banido. 🚫",
+                    detectou: "@{p1}, 🚨🔗 𝑳𝑰𝑵𝑲 𝒅𝒆𝒕𝒆𝒄𝒕𝒂𝒅𝒐 𝒏𝒂 𝒔𝒖𝒂 𝒎𝒆𝒏𝒔𝒂𝒈𝒆𝒎! 𝑷𝒐𝒓 𝒒𝒖𝒆𝒔𝒕𝒐̃𝒆𝒔 𝒅𝒆 𝒔𝒆𝒈𝒖𝒓𝒂𝒏𝒄̧𝒂 🛡️, 𝒗𝒐𝒄𝒆̂ 𝒇𝒐𝒊 𝑩𝑨𝑵𝑰𝑫𝑶 𝒅𝒐 𝒈𝒓𝒖𝒑𝒐 🚫. 𝑹𝑬𝑺𝑷𝑬𝑰𝑻𝑬 𝑨𝑺 𝑹𝑬𝑮𝑹𝑨𝑺 📜.",
                     ligado: "✅ ANTI-LINK ativado",
                     desligado: "⚠️ ANTI-LINK desativado ❌"
                 }
