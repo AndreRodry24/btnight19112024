@@ -1,16 +1,12 @@
 // removerCaracteres.js
 
-// Função para remover participantes em caso de mensagens longas
+// Função para remover participantes em caso de mensagens longas com texto ou legendas em imagens
 export async function removerCaracteres(c, mensagem) {
-    // Obtém o texto da mensagem, seja como 'conversation', 'extendedTextMessage', ou 'caption' de mídias
-    const textoMensagem = mensagem.message?.conversation || 
-                          mensagem.message?.extendedTextMessage?.text || 
-                          mensagem.message?.imageMessage?.caption || 
-                          mensagem.message?.videoMessage?.caption || 
-                          mensagem.message?.documentMessage?.caption;
+    // Obtém o texto da mensagem, seja como 'conversation' ou como legenda de imagem
+    const textoMensagem = mensagem.message?.conversation || mensagem.message?.imageMessage?.caption;
 
     if (textoMensagem) {
-        // Verifica o comprimento total da mensagem
+        // Verifica o comprimento total do texto
         const comprimentoTotal = textoMensagem.length;
 
         // Obtém o ID do usuário que enviou a mensagem
@@ -23,7 +19,7 @@ export async function removerCaracteres(c, mensagem) {
 
         // Apenas se o usuário NÃO for administrador
         if (!isAdmin) {
-            // Verifica se a mensagem tem mais de 950 caracteres
+            // Verifica se a mensagem ou legenda tem mais de 950 caracteres
             if (comprimentoTotal > 950) {
                 try {
                     // Apaga a mensagem do grupo
@@ -33,7 +29,7 @@ export async function removerCaracteres(c, mensagem) {
                     await c.groupParticipantsUpdate(grupoId, [usuarioId], 'remove');
                     
                     // Envia uma mensagem de aviso ao grupo
-                    await c.sendMessage(grupoId, { text: '✅🚫 𝐔𝐬𝐮𝐚𝐫𝐢𝐨 𝐛𝐚𝐧𝐢𝐝𝐨 𝐩𝐨𝐫 𝐦𝐞𝐧𝐬𝐚𝐠𝐞𝐦 𝐬𝐮𝐬𝐩𝐞𝐢𝐭𝐚 𝐜𝐨𝐦 𝐦𝐮𝐢𝐭𝐨𝐬 𝐜𝐚𝐫𝐚𝐜𝐭𝐞𝐫𝐞𝐬 𝐞𝐬𝐩𝐞𝐜𝐢𝐚𝐢𝐬 ✨💥 𝐞 𝐞𝐱𝐭𝐫𝐞𝐦𝐚𝐦𝐞𝐧𝐭𝐞𝐧𝐭𝐞 𝐥𝐨𝐧𝐠𝐚! 📝⛔' });
+                    await c.sendMessage(grupoId, { text: '✅🚫 𝐔𝐬𝐮𝐚𝐫𝐢𝐨 𝐛𝐚𝐧𝐢𝐝𝐨(a) 𝐩𝐨𝐫 𝐦𝐞𝐧𝐬𝐚𝐠𝐞𝐦 𝐬𝐮𝐬𝐩𝐞𝐢𝐭𝐚 𝐜𝐨𝐦 𝐦𝐮𝐢𝐭𝐨𝐬 𝐜𝐚𝐫𝐚𝐜𝐭𝐞𝐫𝐞𝐬 𝐞𝐬𝐩𝐞𝐜𝐢𝐚𝐢𝐬 ✨💥 𝐞 𝐞𝐱𝐭𝐫𝐞𝐦𝐚𝐦𝐞𝐧𝐭𝐞𝐧𝐭𝐞 𝐥𝐨𝐧𝐠𝐚! 📝⛔' });
 
                     console.log(`Usuário ${usuarioId} banido por mensagem longa.`);
                 } catch (error) {
