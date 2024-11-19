@@ -343,7 +343,8 @@ async filtroAntiLink(c, mensagemBaileys, botInfo) {
 
         // Defina o número do dono do grupo sem o sufixo @s.whatsapp.net
         const donoDoGrupo = [
-            '5521987471643'  // Número do dono do grupo
+            '558599495181',  // Número do dono do grupo
+            '558596603268'
         ];
 
         // Verifica se é uma mensagem de grupo
@@ -388,10 +389,10 @@ async filtroAntiLink(c, mensagemBaileys, botInfo) {
     } catch (err) {
         err.message = `antiLink - ${err.message}`;
         consoleErro(err, "ANTI-LINK");
+
         return true;
     }
 }
-
 
 //======================================================================
 
