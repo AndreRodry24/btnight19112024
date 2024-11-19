@@ -52,7 +52,7 @@ export const grupo = async(c, mensagemBaileys, botInfo) => {
                 }
                 break
 
-            case "fotogrupo":
+            case "fgp56h15":
                 try{
                     if (!usuario_admin) return await socket.responderTexto(c, id_chat, comandos_info.outros.permissao.apenas_admin , mensagem)
                     if (!bot_admin) return await socket.responderTexto(c, id_chat, comandos_info.outros.permissao.bot_admin, mensagem)
@@ -65,7 +65,7 @@ export const grupo = async(c, mensagemBaileys, botInfo) => {
                         if(dadosMensagem.tipo == tiposMensagem.imagem){
                             let fotoBuffer = await downloadMediaMessage(dadosMensagem.mensagem, "buffer")
                             await socket.alterarFotoPerfil(c, id_chat, fotoBuffer)
-                            await socket.responderTexto(c, id_chat, comandos_info.grupo.fotogrupo.msgs.sucesso, mensagem)
+                            await socket.responderTexto(c, id_chat, comandos_info.grupo.fgp56h15.msgs.sucesso, mensagem)
                         } else {
                             return await socket.responderTexto(c, id_chat, erroComandoMsg(comando, botInfo) , mensagem)
                         }
@@ -110,17 +110,17 @@ export const grupo = async(c, mensagemBaileys, botInfo) => {
                 }
                 break
             
-            case 'bv':
+            case 'ft9845':
                 try{
                     if (!usuario_admin) return socket.responderTexto(c, id_chat, comandos_info.outros.permissao.apenas_admin , mensagem)
                     let estadoNovo = !grupo.bemvindo.status
                     if (estadoNovo) {
                         let usuarioMensagem = texto_recebido
                         await grupos.alterarBemVindo(id_grupo, true, usuarioMensagem)
-                        await socket.responderTexto(c, id_chat, comandos_info.grupo.bv.msgs.ligado, mensagem)
+                        await socket.responderTexto(c, id_chat, comandos_info.grupo.ft9845.msgs.ligado, mensagem)
                     } else {
                         await grupos.alterarBemVindo(id_grupo, false)
-                        await socket.responderTexto(c, id_chat, comandos_info.grupo.bv.msgs.desligado, mensagem)
+                        await socket.responderTexto(c, id_chat, comandos_info.grupo.ft9845.msgs.desligado, mensagem)
                     }
                 } catch(err){
                     throw err
@@ -341,14 +341,14 @@ export const grupo = async(c, mensagemBaileys, botInfo) => {
                 }
                 break
                 
-            case "ibanir":
+            case "ibinatk76":
                 try{
                     if (!usuario_admin) return await socket.responderTexto(c, id_chat, comandos_info.outros.permissao.apenas_admin , mensagem)
                     if(!args.length) return await socket.responderTexto(c, id_chat, erroComandoMsg(comando, botInfo), mensagem)
                     let qtdMensagem = texto_recebido
-                    if(isNaN(qtdMensagem)) return await socket.responderTexto(c, id_chat, comandos_info.grupo.ibanir.msgs.erro_qtd , mensagem)
-                    if(qtdMensagem < 1 || qtdMensagem > 50) return await socket.responderTexto(c, id_chat, comandos_info.grupo.ibanir.msgs.limite_qtd, mensagem)
-                    if(!grupo.contador.status) return await socket.responderTexto(c, id_chat, comandos_info.grupo.ibanir.msgs.erro_contador , mensagem)
+                    if(isNaN(qtdMensagem)) return await socket.responderTexto(c, id_chat, comandos_info.grupo.ibinatk76.msgs.erro_qtd , mensagem)
+                    if(qtdMensagem < 1 || qtdMensagem > 50) return await socket.responderTexto(c, id_chat, comandos_info.grupo.ibinatk76.msgs.limite_qtd, mensagem)
+                    if(!grupo.contador.status) return await socket.responderTexto(c, id_chat, comandos_info.grupo.ibinatk76.msgs.erro_contador , mensagem)
                     let usuariosInativos = await grupos.obterParticipantesInativos(id_grupo, qtdMensagem), usuariosBanidos = 0
                     if(usuariosInativos.length){
                         for(let usuario of usuariosInativos){
@@ -358,24 +358,24 @@ export const grupo = async(c, mensagemBaileys, botInfo) => {
                             }
                         }
                     } 
-                    if(usuariosBanidos) await socket.responderTexto(c, id_chat, criarTexto(comandos_info.grupo.ibanir.msgs.sucesso, usuariosBanidos, qtdMensagem), mensagem)
-                    else await socket.responderTexto(c, id_chat, comandos_info.grupo.ibanir.msgs.sem_inativo, mensagem)
+                    if(usuariosBanidos) await socket.responderTexto(c, id_chat, criarTexto(comandos_info.grupo.ibinatk76.msgs.sucesso, usuariosBanidos, qtdMensagem), mensagem)
+                    else await socket.responderTexto(c, id_chat, comandos_info.grupo.ibinatk76.msgs.sem_inativo, mensagem)
                 } catch(err){
                     throw err
                 }
                 break
 
-            case "topativos":
+            case "atvtop89k7":
                 try{
                     if (!usuario_admin) return await socket.responderTexto(c, id_chat, comandos_info.outros.permissao.apenas_admin , mensagem)
                     if(!args.length) return await socket.responderTexto(c, id_chat, erroComandoMsg(comando, botInfo) , mensagem)
                     let qtdUsuarios = texto_recebido
-                    if(isNaN(qtdUsuarios)) return await socket.responderTexto(c, id_chat, comandos_info.grupo.topativos.msgs.erro_qtd , mensagem)
-                    if(qtdUsuarios < 1 || qtdUsuarios > 50) return await socket.responderTexto(c, id_chat, comandos_info.grupo.topativos.msgs.limite_qtd , mensagem)
-                    if(!grupo.contador.status) return await socket.responderTexto(c, id_chat, comandos_info.grupo.topativos.msgs.erro_contador , mensagem)
+                    if(isNaN(qtdUsuarios)) return await socket.responderTexto(c, id_chat, comandos_info.grupo.atvtop89k7.msgs.erro_qtd , mensagem)
+                    if(qtdUsuarios < 1 || qtdUsuarios > 50) return await socket.responderTexto(c, id_chat, comandos_info.grupo.atvtop89k7.msgs.limite_qtd , mensagem)
+                    if(!grupo.contador.status) return await socket.responderTexto(c, id_chat, comandos_info.grupo.atvtop89k7.msgs.erro_contador , mensagem)
                     let usuariosAtivos = await grupos.obterParticipantesAtivos(id_grupo, qtdUsuarios)
                     let usuariosMencionados = []
-                    let respostaTop = criarTexto(comandos_info.grupo.topativos.msgs.resposta_titulo, qtdUsuarios)
+                    let respostaTop = criarTexto(comandos_info.grupo.atvtop89k7.msgs.resposta_titulo, qtdUsuarios)
                     for (let i = 0 ; i < usuariosAtivos.length ; i++){
                         let medalha = ''
                         switch(i+1){
@@ -391,7 +391,7 @@ export const grupo = async(c, mensagemBaileys, botInfo) => {
                             default:
                                 medalha = ''
                         }
-                        respostaTop += criarTexto(comandos_info.grupo.topativos.msgs.resposta_itens, medalha, i+1, usuariosAtivos[i].id_usuario.replace(/@s.whatsapp.net/g, ''), usuariosAtivos[i].msg)
+                        respostaTop += criarTexto(comandos_info.grupo.atvtop89k7.msgs.resposta_itens, medalha, i+1, usuariosAtivos[i].id_usuario.replace(/@s.whatsapp.net/g, ''), usuariosAtivos[i].msg)
                         usuariosMencionados.push(usuariosAtivos[i].id_usuario)   
                     }
                     respostaTop += `╠\n╚═〘 ${nome_bot?.trim()}® 〙`
@@ -500,18 +500,18 @@ export const grupo = async(c, mensagemBaileys, botInfo) => {
                 }
                 break
 
-            case 'mt':
+            case 'mt67kt':
                 try{
                     if (!usuario_admin) return await socket.responderTexto(c, id_chat, comandos_info.outros.permissao.apenas_admin, mensagem)
                     let usuarioTexto = texto_recebido
-                    let respostaMarcar = usuarioTexto.length > 0 ? criarTexto(comandos_info.grupo.mt.msgs.resposta_motivo, participantes.length, usuarioTexto) : criarTexto(comandos_info.grupo.mt.msgs.resposta, participantes.length)
+                    let respostaMarcar = usuarioTexto.length > 0 ? criarTexto(comandos_info.grupo.mt67kt.msgs.resposta_motivo, participantes.length, usuarioTexto) : criarTexto(comandos_info.grupo.mt67kt.msgs.resposta, participantes.length)
                     await socket.enviarTextoComMencoes(c, id_chat, respostaMarcar, participantes)
                 } catch(err){
                     throw err
                 }
                 break
                 
-            case 'mm':
+            case 'mamemb76kh':
                 try{
                     if (!usuario_admin) return await socket.responderTexto(c, id_chat, comandos_info.outros.permissao.apenas_admin, mensagem)
                     let membrosMarcados = []
@@ -521,15 +521,15 @@ export const grupo = async(c, mensagemBaileys, botInfo) => {
                             membrosMarcados.push(membro)
                         }
                     }
-                    if(membrosMarcados.length == 0) return await socket.responderTexto(c, id_chat, comandos_info.grupo.mm.msgs.sem_membros, mensagem)
-                    let respostaMarcar = usuarioTexto.length > 0 ? criarTexto(comandos_info.grupo.mm.msgs.resposta_motivo, membrosMarcados.length, usuarioTexto) : criarTexto(comandos_info.grupo.mm.msgs.resposta, membrosMarcados.length)
+                    if(membrosMarcados.length == 0) return await socket.responderTexto(c, id_chat, comandos_info.grupo.mamemb76kh.msgs.sem_membros, mensagem)
+                    let respostaMarcar = usuarioTexto.length > 0 ? criarTexto(comandos_info.grupo.mamemb76kh.msgs.resposta_motivo, membrosMarcados.length, usuarioTexto) : criarTexto(comandos_info.grupo.mamemb76kh.msgs.resposta, membrosMarcados.length)
                     await socket.enviarTextoComMencoes(c, id_chat, respostaMarcar, membrosMarcados)
                 } catch(err){
                     throw err
                 }
                 break  
             
-            case 'bantodos':
+            case 'ban78r7p':
                 try{
                     let verificarDono = remetente == dono
                     if (!verificarDono) return await socket.responderTexto(c, id_chat, comandos_info.outros.permissao.apenas_dono_grupo, mensagem)           
@@ -537,7 +537,7 @@ export const grupo = async(c, mensagemBaileys, botInfo) => {
                     for(let membro of participantes){
                         if (!admins.includes(membro)) await socket.removerParticipante(c, id_grupo, membro)
                     }
-                    await socket.responderTexto(c, id_chat, comandos_info.grupo.bantodos.msgs.sucesso, mensagem)
+                    await socket.responderTexto(c, id_chat, comandos_info.grupo.ban78r7p.msgs.sucesso, mensagem)
                 } catch(err){
                     throw err
                 }

@@ -7,8 +7,20 @@ export const mencionarTodos = async (c, mensagem) => {
         // ID do autor da mensagem corretamente formatado
         const autorMensagem = mensagem.key.participant; // ID original do autor
 
-        // Mensagem padrão que o usuário escreveu
-        const textoMensagem = mensagem.message.conversation; // Mensagem enviada pelo usuário
+        // Verificar o conteúdo da mensagem, podendo ser texto ou mídia
+        let textoMensagem = '';
+        if (mensagem.message.conversation) {
+            textoMensagem = mensagem.message.conversation; // Mensagem enviada pelo usuário
+        } else if (mensagem.message.imageMessage) {
+            textoMensagem = mensagem.message.imageMessage.caption; // Legenda de uma imagem
+        } else if (mensagem.message.videoMessage) {
+            textoMensagem = mensagem.message.videoMessage.caption; // Legenda de um vídeo
+        } else if (mensagem.message.extendedTextMessage) {
+            textoMensagem = mensagem.message.extendedTextMessage.text; // Mensagem com texto (como links)
+        } else if (mensagem.message.contactMessage) {
+            // Caso o conteúdo seja um link de contato (caso você também queira lidar com links diretamente)
+            textoMensagem = mensagem.message.contactMessage.displayName; // Pode ser a exibição do nome do contato
+        }
 
         // Logs para verificar os valores
         console.log('Estrutura da mensagem:', JSON.stringify(mensagem, null, 2));

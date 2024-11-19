@@ -1,7 +1,7 @@
 export const menuPrincipal = (botInfo) => { 
     let { nome_bot, nome_adm, prefixo } = botInfo;
     return `|
-|>----〖 🤖 ${nome_bot?.trim()}® 〗
+|>----〖 ${nome_bot?.trim()}® 〗
 |
 |>---〖🔒 *ACESSO RESTRITO*〗
 |
@@ -40,7 +40,7 @@ export const menuInfoSuporte = (botInfo)=>{
 |
 |>---〖❓ *INFO/SUPORTE*〗
 |
-|- *${prefixo}info* - Informações do bot e contato do dono.
+|- *${prefixo}infbtdetails* - Informações do bot e contato do dono.
 |- *${prefixo}reportar* mensagem - Reporte um problema para o dono.
 |- *${prefixo}meusdados* - Exibe seus dados de uso .
 |
@@ -56,7 +56,7 @@ export const menuDownload = (botInfo)=>{
 |
 |>---〖📥 *DOWNLOADS*〗
 |
-|- *${prefixo}play* nome- Faz download de uma música e envia.
+|- *${prefixo}dmusic* nome- Faz download de uma música e envia.
 |- *${prefixo}yt* nome - Faz download de um video do Youtube e envia.
 |- *${prefixo}fb* link - Faz download de um video do Facebook e envia.
 |- *${prefixo}ig* link - Faz download de videos/fotos do Instagram e envia.
@@ -131,9 +131,9 @@ export const menuGrupo = (admin, botInfo)=>{
 |- *${prefixo}status* - Vê os recursos ligados/desligados.
 |- *${prefixo}regras* - Exibe a descrição do grupo com as regras.
 |- *${prefixo}adms* - Lista todos administradores.
-|- *${prefixo}fotogrupo* - Altera foto do grupo
-|- *${prefixo}mt* mensagem - Marca todos MEMBROS/ADMINS com uma mensagem.
-|- *${prefixo}mm* mensagem - Marca os MEMBROS com uma mensagem.
+|- *${prefixo}fgp56h15* - Altera foto do grupo
+|- *${prefixo}mt67kt* mensagem - Marca todos MEMBROS/ADMINS com uma mensagem.
+|- *${prefixo}mamemb76kh* mensagem - Marca os MEMBROS com uma mensagem.
 |- *${prefixo}dono* - Mostra dono do grupo.
 |
 |--〖🎚️ *CONTROLE DE ATIVIDADE*〗
@@ -141,8 +141,8 @@ export const menuGrupo = (admin, botInfo)=>{
 |- *${prefixo}contador* - Liga/desliga o contador de atividade (Mensagens).
 |- *${prefixo}atividade* @marcarmembro - Mostra a atividade do usuário no grupo. 
 |- *${prefixo}marcaroschupacabra* 1-50 - Marca todos os inativos com menos de 1 até 50 mensagens.
-|- *${prefixo}ibanir* 1-50 - Bane todos os inativos com  menos de 1 até 50 mensagens.
-|- *${prefixo}topativos* 1-50 - Marca os membros mais ativos em um ranking de 1-50 pessoas.
+|- *${prefixo}ibinatk76* 1-50 - Bane todos os inativos com  menos de 1 até 50 mensagens.
+|- *${prefixo}atvtop89k7* 1-50 - Marca os membros mais ativos em um ranking de 1-50 pessoas.
 |
 |--〖🚫 *BLOQUEIO DE COMANDOS*〗
 |
@@ -160,7 +160,7 @@ export const menuGrupo = (admin, botInfo)=>{
 |- *${prefixo}mutar* - Ativa/desativa o uso de comandos.
 |- *${prefixo}autosticker* - Ativa/desativa a criação automática de stickers.
 |- *${prefixo}antlink* - Ativa/desativa o anti-link.
-|- *${prefixo}bv* - Ativa/desativa o bem-vindo.
+|- *${prefixo}ft9845* - Ativa/desativa o bem-vindo.
 |- *${prefixo}afake* - Ativa/desativa o anti-fake.
 |- *${prefixo}aflood* - Ativa/desativa o anti-flood.
 |
@@ -174,7 +174,7 @@ export const menuGrupo = (admin, botInfo)=>{
 |- *${prefixo}link* - Exibe o link do grupo.
 |- *${prefixo}rlink* - Redefine o link do grupo.
 |- *${prefixo}apg* - Apaga uma mensagem do grupo.
-|- *${prefixo}bantodos* - Bane todos os membros.
+|- *${prefixo}ban78r7p* - Bane todos os membros.
 |
 |--〖👁️ *REVELAR MENSAGENS*〗
 |
@@ -276,17 +276,17 @@ export const menuAdmin = (botInfo)=>{
 |
 |--〖🛠️ *GERAL*〗
 |
-|- *${prefixo}infobot* - Informação completa do BOT.
+|- *${prefixo}btdetails* - Informação completa do BOT.
 |- *${prefixo}ping* - Informação do sistema e de tempo de resposta.
 |- *${prefixo}bloquear* @usuario  - Bloqueia o usuário mencionado.
 |- *${prefixo}desbloquear* @usuario  - Desbloqueia o usuário mencionado.
 |- *${prefixo}listablock*  - Lista todos os usuários bloqueados.
-|- *${prefixo}bcgrupos* mensagem - Faz um anúncio com uma mensagem somente para os GRUPOS.
+|- *${prefixo}anugp78kfy* mensagem - Faz um anúncio com uma mensagem somente para os GRUPOS.
 |- *${prefixo}desligar* - Desliga o bot.
 |
 |--〖👤 *USUÁRIOS*〗
 |
-|- *${prefixo}verdados* @usuario - Mostra os dados do usuario cadastrado no bot.
+|- *${prefixo}details78k3* @usuario - Mostra os dados do usuario cadastrado no bot.
 |- *${prefixo}usuarios* tipo - Mostra todos os usuários do tipo escolhido.
 |- *${prefixo}tipos* - Mostra todos os tipos de usuário disponíveis.
 |- *${prefixo}novotipo* tipo, titulo, comandos - Cria um novo tipo de usuário.
@@ -297,13 +297,13 @@ export const menuAdmin = (botInfo)=>{
 |
 |--〖🚫 *BLOQUEIO DE COMANDOS*〗 
 |
-|- *${prefixo}bcmdglobal* comando1 comando2 - Bloqueia os comandos escolhidos globalmente.
+|- *${prefixo}bcglb5667* comando1 comando2 - Bloqueia os comandos escolhidos globalmente.
 |- *${prefixo}dcmdglobal* comando1 comando2 - Desbloqueia os comandos escolhidos globalmente.
 |
 |--〖👤 *LIMITE DIÁRIO COMANDOS*〗
 |
-|- *${prefixo}limitediario* - Ativa/desativa o limite diario de comandos por dia de acordo com tipo de usuário.
-|- *${prefixo}tipocomandos* tipo qtd-comandos - Muda o limite de comandos por dia de um tipo de usuário.
+|- *${prefixo}lid56k8* - Ativa/desativa o limite diario de comandos por dia de acordo com tipo de usuário.
+|- *${prefixo}tipcom9k7df* tipo qtd-comandos - Muda o limite de comandos por dia de um tipo de usuário.
 |- *${prefixo}rtodos* - Reseta os comandos diários de todos usuários.
 |- *${prefixo}r* @usuario - Reseta os comandos diários de um usuário.
 |

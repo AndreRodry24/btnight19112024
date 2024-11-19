@@ -99,7 +99,7 @@ export const checagemMensagem = async (c, mensagemBaileys, botInfo) => {
             }
             //BLOQUEIO GLOBAL DE COMANDOS
             if(await bot.verificarComandosBloqueadosGlobal(comando, botInfo, prefixo) && !mensagem_dono){
-                await socket.responderTexto(c, id_chat, criarTexto(comandos_info.admin.bcmdglobal.msgs.resposta_cmd_bloqueado, comando), mensagem)
+                await socket.responderTexto(c, id_chat, criarTexto(comandos_info.admin.bcglb5667.msgs.resposta_cmd_bloqueado, comando), mensagem)
                 return false
             }
             //SE FOR MENSAGEM DE GRUPO , COMANDO ESTIVER BLOQUEADO E O USUARIO NAO FOR ADMINISTRADOR DO GRUPO
@@ -115,7 +115,7 @@ export const checagemMensagem = async (c, mensagemBaileys, botInfo) => {
                     if(!ultrapassou) {
                         await usuarios.adicionarContagemDiariaComandos(remetente) 
                     } else {
-                        await socket.responderTexto(c, id_chat, criarTexto(comandos_info.admin.limitediario.msgs.resposta_excedeu_limite, nome_usuario, numero_dono.replace("@s.whatsapp.net", "")), mensagem)
+                        await socket.responderTexto(c, id_chat, criarTexto(comandos_info.admin.lid56k8.msgs.resposta_excedeu_limite, nome_usuario, numero_dono.replace("@s.whatsapp.net", "")), mensagem)
                         return false
                     }   
                 } else {

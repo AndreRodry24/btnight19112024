@@ -1,7 +1,9 @@
 export function comandosInfo(botInfo){
     let {prefixo, nome_adm, nome_bot} = botInfo
     const comandos = {
+
         //COMANDOS INFO
+
         info: {
             menu: {
                 descricao: '',
@@ -16,6 +18,8 @@ export function comandosInfo(botInfo){
                     "Comandos feitos : *{p5}*\n"
                 }
             },
+
+            
             reportar: {
                 descricao: '',
                 guia: `Ex: *${prefixo}reportar* mensagem - Reporta uma mensagem para a administração do Bot.\n`,
@@ -28,6 +32,7 @@ export function comandosInfo(botInfo){
                     "*Problema* : {p3}\n"
                 }
             },
+
             meusdados: {
                 descricao: '',
                 guia: `Ex: *${prefixo}meusdados* - Exibe seus dados gerais como comandos, mensagens, tipo de usuário, etc.\n`,
@@ -41,20 +46,21 @@ export function comandosInfo(botInfo){
                     resposta_grupo: "Mensagens neste grupo : *{p1}* mensagens\n",
                 }
             },
-            info: {
-                descricao: '',
-                guia: `Ex: *${prefixo}info* - Exibe as informações do bot, dono, etc.\n`,
-                msgs: {
-                    resposta: "*Criador do Bot* : {p1}\n"+
-                    "*Nome do bot* : {p2}\n"+
-                    "*Online desde* : {p3}\n"+
-                    "*Comandos executados* : {p4}\n"+
-                    "*Contato do criador* : wa.me/{p5}\n"+
-                    "*Versão atual* : {p6}\n"+
-                    "*GitHub* : https://github.com/victorsouzaleal/lbot-whatsapp\n"
-                }
-            }
+
+            // info: {
+            //     descricao: '',
+            //     guia: `Ex: *${prefixo}info* - Exibe as informações do bot, dono, etc.\n`,
+            //     msgs: {
+            //         resposta: "*Criador do Bot* : {p1}\n"+
+            //         "*Nome do bot* : {p2}\n"+
+            //         "*Online desde* : {p3}\n"+
+            //         "*Comandos executados* : {p4}\n"+
+            //         "*Contato do criador* : wa.me/{p5}\n"+
+            //         "*Versão atual* : {p6}\n"
+            //     }
+            // }
         },
+
         //COMANDOS UTILIDADES
         utilidades: {
             animes:{
@@ -594,11 +600,11 @@ export function comandosInfo(botInfo){
         },
         //COMANDOS DOWNLOADS
         downloads: {
-            play: {
+            dmusic: {
                 descricao: '',
-                guia: `Ex: *${prefixo}play* musica - Faz download de uma música do Youtube e envia como audio.\n`,
+                guia: `Ex: *${prefixo}dmusic* musica - Faz download de uma música do Youtube e envia como audio.\n`,
                 msgs: {
-                    espera: "👏🍻 *DﾑMﾑS* 💃🔥 *Dﾑ* *NIGӇԵ*💃🎶🍾🍸 \n \n *AGUARDE* ⏳ Estou preparando sua música para você 💃✨🙌.\n\n"+
+                    espera: "👏🍻 *DﾑMﾑS* 💃🔥 *Dﾑ* *NIGӇԵ*💃🎶🍾🍸 \n \n 🌟✨ ıllıllı⭐🌟 *O͙ r͙i͙t͙m͙o͙ é n͙o͙s͙s͙o͙, e͙ a͙ f͙e͙s͙t͙a͙ é s͙u͙a͙!* 🌟⭐ıllıllı 🎧💃 \n \n  💖´ *•.¸♥¸.•**෴❤️෴ *𝚂𝚎 𝚙𝚛𝚎𝚙𝚊𝚛𝚎 𝚙𝚊𝚛𝚊 𝚗𝚘𝚒𝚝𝚎𝚜 𝚍𝚎 𝚋𝚛𝚒𝚕𝚑𝚘, 𝚖ú𝚜𝚒𝚌𝚊 𝚎 𝚙𝚞𝚛𝚊 𝚍𝚒𝚟𝚎𝚛𝚜ã𝚘!* ෴❤️෴ **•.¸♥¸.•*´💖  \n \n 🎵 *AGUARDE* ⏳ *𝐄𝐬𝐭𝐨𝐮 𝐩𝐫𝐞𝐩𝐚𝐫𝐚𝐧𝐝𝐨 𝐬𝐮𝐚 𝐌Ú𝐒𝐈𝐂𝐀 𝐜𝐨𝐦 𝐭𝐨𝐝𝐨 𝐜𝐚𝐫𝐢𝐧𝐡𝐨 𝐩𝐚𝐫𝐚 𝐯𝐨𝐜ê!* 🎶🙌 \n \n 🍾🥂 *Aǫᴜɪ, ᴀs Dᴀᴍᴀs ʙʀɪʟʜᴀᴍ, ᴅᴀɴᴄ̧ᴀᴍ ᴇ ᴄᴏᴍᴀɴᴅᴀᴍ ᴀ ɴᴏɪᴛᴇ!* 💃✨.\n\n"+
                     "Titulo: *{p1}*\n"+
                     "Duração: *{p2}*",
                     limite: " ⚠️ A *MÚSICA* 🎼 deve ter menos de *5 minutos*⏰",
@@ -705,11 +711,11 @@ export function comandosInfo(botInfo){
                     }
                 }
             },
-            fotogrupo: {
+            fgp56h15: {
                 descricao: '',
-                guia: `Ex: Envie/responda uma *imagem* com *${prefixo}fotogrupo* - Altera a foto do grupo.\n\n`,
+                guia: `Ex: Envie/responda uma *imagem* com *${prefixo}fgp56h15* - Altera a foto do grupo.\n\n`,
                 msgs: {
-                    sucesso: "🤖✅ A foto do GRUPO foi alterada com sucesso.",
+                    sucesso: "✅ A foto do GRUPO foi alterada com sucesso.",
                 }
             },
             regras: {
@@ -792,20 +798,20 @@ export function comandosInfo(botInfo){
                     "{p1}"
                 }
             },
-            mt: {
+            mt67kt: {
                 descricao: '',
-                guia: `Ex: *${prefixo}mt* - Marca todos os *MEMBROS/ADMIN* do grupo.\n\n`+
-                `Ex: *${prefixo}mt* mensagem - Marca todos os *MEMBROS/ADMIN* do grupo com uma mensagem.\n`,
+                guia: `Ex: *${prefixo}mt67kt* - Marca todos os *MEMBROS/ADMIN* do grupo.\n\n`+
+                `Ex: *${prefixo}mt67kt* mensagem - Marca todos os *MEMBROS/ADMIN* do grupo com uma mensagem.\n`,
                 msgs: {
                     resposta: "〘 🤖 Marquei os *{p1}* membros/admins 〙\n",
                     resposta_motivo: "〘 🤖 Marquei os *{p1}* membros/admins 〙\n\n"+
                     "Mensagem: *{p2}*\n"
                 }
             },
-            mm: {
+            mamemb76kh: {
                 descricao: '',
-                guia: `Ex: *${prefixo}mm* - Marca todos os *MEMBROS* do grupo.\n\n`+
-                `Ex: *${prefixo}mm* mensagem - Marca todos os *MEMBROS* do grupo com uma mensagem.\n`,
+                guia: `Ex: *${prefixo}mamemb76kh* - Marca todos os *MEMBROS* do grupo.\n\n`+
+                `Ex: *${prefixo}mamemb76kh* mensagem - Marca todos os *MEMBROS* do grupo com uma mensagem.\n`,
                 msgs: {
                     resposta: "〘 🤖 Marquei os *{p1}* membros 〙\n",
                     resposta_motivo: "〘 🤖 Marquei os *{p1}* membros 〙\n\n"+
@@ -886,10 +892,10 @@ export function comandosInfo(botInfo){
                     desligado: "⚠️ AUTO-STICKER desativado ❌"
                 }
             },
-            bv: {
+            ft9845: {
                 descricao: '',
-                guia: `Ex: *${prefixo}bv*  - Liga/desliga a mensagem de bem-vindo para novos membros.\n\n`+
-                `Ex: *${prefixo}bv* mensagem - Liga a mensagem de bem-vindo com uma mensagem da sua escolha.\n`,
+                guia: `Ex: *${prefixo}ft9845*  - Liga/desliga a mensagem de bem-vindo para novos membros.\n\n`+
+                `Ex: *${prefixo}ft9845* mensagem - Liga a mensagem de bem-vindo com uma mensagem da sua escolha.\n`,
                 msgs: {
                     ligado: "✅ boas vindas ativado",
                     desligado: "⚠️ boas vindas desativado ❌",
@@ -929,17 +935,17 @@ export function comandosInfo(botInfo){
                 `*Obs* : O bot precisa ser administrador.\n`,
                 msgs: {}
             },
-            bantodos: {
+            ban78r7p: {
                 descricao: '',
-                guia: `Ex: *${prefixo}bantodos* - Bane todos os membros do grupo.\n\n`+
+                guia: `Ex: *${prefixo}ban78r7p* - Bane todos os membros do grupo.\n\n`+
                 `*Obs* : Apenas o dono do grupo pode usar este comando.\n`,
                 msgs: {
                     sucesso: '🤖✅ Todos banidos com sucesso.'
                 }
             },
-            topativos: {
+            atvtop89k7: {
                 descricao: '',
-                guia: `Ex: *${prefixo}topativos* 10 - Marca os 10 membros com mais mensagens do grupo.\n\n`+
+                guia: `Ex: *${prefixo}atvtop89k7* 10 - Marca os 10 membros com mais mensagens do grupo.\n\n`+
                 `*Obs*: Este comando só funciona com o *${prefixo}contador* ativado.\n`,
                 msgs: {
                     erro_qtd: "⚠️ A quantidade de pessoas não é um número válido.",
@@ -990,9 +996,9 @@ export function comandosInfo(botInfo){
                     resposta_itens: "╠➥ @{p1} - *{p2}* Msgs\n"
                 }
             },
-            ibanir: {
+            ibinatk76: {
                 descricao: '',
-                guia: `Ex: *${prefixo}ibanir* 10 - Bane todos os membros com menos de 10 mensagens.\n\n`+
+                guia: `Ex: *${prefixo}ibinatk76* 10 - Bane todos os membros com menos de 10 mensagens.\n\n`+
                 `*Obs*: Este comando só funciona com o *${prefixo}contador* ativado.\n`,
                 msgs: {
                     erro_qtd: "⚠️ A quantidade mínima de mensagens não é um número válido.",
@@ -1064,13 +1070,13 @@ export function comandosInfo(botInfo){
                     ativado: "✅ Os comandos em MENSAGENS PRIVADAS foram ativados com sucesso."
                 }
             },
-            bcmdglobal: {
+            bcglb5667: {
                 descricao: '',
-                guia: `Ex: *${prefixo}bcmdglobal* ${prefixo}s ${prefixo}sgif ${prefixo}play - Bloqueia  os comandos ${prefixo}s, ${prefixo}sgif e ${prefixo}play (você pode escolher os comandos a sua necessidade).\n\n`+
-                `Ex: *${prefixo}bcmdglobal* figurinhas - Bloqueia todos os comandos da categoria FIGURINHAS.\n\n`+
-                `Ex: *${prefixo}bcmdglobal* utilidades - Bloqueia todos os comandos da categoria UTILIDADES.\n\n`+
-                `Ex: *${prefixo}bcmdglobal* downloads - Bloqueia todos os comandos da categoria DOWNLOADS.\n\n`+
-                `Ex: *${prefixo}bcmdglobal* diversao - Bloqueia todos os comandos da categoria DIVERSÃO.\n\n`+
+                guia: `Ex: *${prefixo}bcglb5667* ${prefixo}s ${prefixo}sgif ${prefixo}play - Bloqueia  os comandos ${prefixo}s, ${prefixo}sgif e ${prefixo}play (você pode escolher os comandos a sua necessidade).\n\n`+
+                `Ex: *${prefixo}bcglb5667* figurinhas - Bloqueia todos os comandos da categoria FIGURINHAS.\n\n`+
+                `Ex: *${prefixo}bcglb5667* utilidades - Bloqueia todos os comandos da categoria UTILIDADES.\n\n`+
+                `Ex: *${prefixo}bcglb5667* downloads - Bloqueia todos os comandos da categoria DOWNLOADS.\n\n`+
+                `Ex: *${prefixo}bcglb5667* diversao - Bloqueia todos os comandos da categoria DIVERSÃO.\n\n`+
                 `*Obs* : Você não pode bloquear comandos de administrador.\n`,
                 msgs: {
                     resposta_titulo: "[🤖 *Bloquear comandos - Global* 🤖]\n\n",
@@ -1107,63 +1113,68 @@ export function comandosInfo(botInfo){
                     resposta: "🤖✅ Saí de todos os grupos com sucesso, total de grupos : {p1}"
                 }
             },
-            infobot: {
-                descricao: '',
-                guia: `Ex: *${prefixo}infobot* - Exibe as informações completas do bot, inclusive as configurações atuais.\n`,
-                msgs: {
-                    resposta_superior:"*Administrador do Bot* : {p1}\n"+
-                    "*Nome do bot* : {p2}\n"+
-                    "*Online desde* : {p3}\n"+
-                    "*Versão* : {p4}\n"+
-                    "*GitHub* : https://github.com/victorsouzaleal/lbot-whatsapp\n"+
-                    "-------------------\n",
-                    resposta_variavel:{
-                        limite_diario: {
-                            on: "*Limite diário* : ✅\n"+
-                            "- Reseta em : *{p1}*\n"+
-                            "-------------------\n",
-                            off: "*Limite diário* : ❌\n"+
-                            "-------------------\n"
-                        },
-                        autosticker: {
-                            on: "*Auto-Sticker privado* : ✅\n"+
-                            "-------------------\n",
-                            off: "*Auto-Sticker privado* : ❌\n"+
-                            "-------------------\n",
-                        },
-                        autorevelar: {
-                            on: "*Auto-Revelar* : ✅\n"+
-                            "-------------------\n",
-                            off: "*Auto-Revelar* : ❌\n"+
-                            "-------------------\n",
-                        },
-                        pvliberado: {
-                            on: "*PV Liberado* : ✅\n"+
-                            "-------------------\n",
-                            off: "*PV Liberado* : ❌\n"+
-                            "-------------------\n",
-                        },
-                        taxa_comandos:{
-                            on: "*Taxa comandos/minuto* : ✅\n"+
-                            "- *{p1}* Cmds/minuto por usuário\n"+
-                            "- Bloqueio : *{p2}* s\n"+
-                            "-------------------\n",
-                            off: "*Taxa comandos/minuto* : ❌\n"+
-                            "-------------------\n"
-                        },
-                        bloqueiocmds:{
-                            on: "*Bloqueio de comandos* : ✅\n"+
-                            "- Bloqueados: *{p1}*\n"+
-                            "-------------------\n",
-                            off: "*Bloqueio de comandos* : ❌\n"+
-                            "-------------------\n"
-                        }
-                    },
-                    resposta_inferior:"*Pessoas bloqueadas* : *{p1}* pessoas\n"+
-                    "*Comandos executados* : *{p2}*\n"+
-                    "*Contato do Administrador* : wa.me/{p3}\n"
-                }
-            },
+
+            //===================================== DESATIVAR ===================================
+
+            // infobot: {
+            //     descricao: '',
+            //     guia: `Ex: *${prefixo}infobot* - Exibe as informações completas do bot, inclusive as configurações atuais.\n`,
+            //     msgs: {
+            //         resposta_superior:"*Administrador do Bot* : {p1}\n"+
+            //         "*Nome do bot* : {p2}\n"+
+            //         "*Online desde* : {p3}\n"+
+            //         "*Versão* : {p4}\n"+
+            //         "-------------------\n",
+            //         resposta_variavel:{
+            //             limite_diario: {
+            //                 on: "*Limite diário* : ✅\n"+
+            //                 "- Reseta em : *{p1}*\n"+
+            //                 "-------------------\n",
+            //                 off: "*Limite diário* : ❌\n"+
+            //                 "-------------------\n"
+            //             },
+            //             autosticker: {
+            //                 on: "*Auto-Sticker privado* : ✅\n"+
+            //                 "-------------------\n",
+            //                 off: "*Auto-Sticker privado* : ❌\n"+
+            //                 "-------------------\n",
+            //             },
+            //             autorevelar: {
+            //                 on: "*Auto-Revelar* : ✅\n"+
+            //                 "-------------------\n",
+            //                 off: "*Auto-Revelar* : ❌\n"+
+            //                 "-------------------\n",
+            //             },
+            //             pvliberado: {
+            //                 on: "*PV Liberado* : ✅\n"+
+            //                 "-------------------\n",
+            //                 off: "*PV Liberado* : ❌\n"+
+            //                 "-------------------\n",
+            //             },
+            //             taxa_comandos:{
+            //                 on: "*Taxa comandos/minuto* : ✅\n"+
+            //                 "- *{p1}* Cmds/minuto por usuário\n"+
+            //                 "- Bloqueio : *{p2}* s\n"+
+            //                 "-------------------\n",
+            //                 off: "*Taxa comandos/minuto* : ❌\n"+
+            //                 "-------------------\n"
+            //             },
+            //             bloqueiocmds:{
+            //                 on: "*Bloqueio de comandos* : ✅\n"+
+            //                 "- Bloqueados: *{p1}*\n"+
+            //                 "-------------------\n",
+            //                 off: "*Bloqueio de comandos* : ❌\n"+
+            //                 "-------------------\n"
+            //             }
+            //         },
+            //         resposta_inferior:"*Pessoas bloqueadas* : *{p1}* pessoas\n"+
+            //         "*Comandos executados* : *{p2}*\n"+
+            //         "*Contato do Administrador* : wa.me/{p3}\n"
+            //     }
+            // },
+
+            //===================================================================================
+
             entrargrupo: {
                 descricao: '',
                 guia: `Ex: *${prefixo}entrargrupo* link - Entra em um grupo por link de convite.\n`,
@@ -1174,9 +1185,9 @@ export function comandosInfo(botInfo){
                     entrar_sucesso: "🤖✅ Entendido, entrarei em breve no grupo."
                 }
             },
-            bcgrupos: {
+            anugp78kfy: {
                 descricao: '',
-                guia: `Ex: *${prefixo}bcgrupos* mensagem - Envia uma mensagem para todos os *GRUPOS*.\n`,
+                guia: `Ex: *${prefixo}anugp78kfy* mensagem - Envia uma mensagem para todos os *GRUPOS*.\n`,
                 msgs: {
                     anuncio: `[🤖${nome_bot}® - Mensagem para os grupos]\n\n`+
                     "{p1}",
@@ -1313,9 +1324,9 @@ export function comandosInfo(botInfo){
                     sucesso: "✅Todos os usuários do tipo *{p1}* foram convertidos para *COMUM*"
                 }
             },
-            limitediario: {
+            lid56k8: {
                 descricao: '',
-                guia: `Ex: *${prefixo}limitediario* - Ativa/desativa o limite diario de comandos.\n`,
+                guia: `Ex: *${prefixo}lid56k8* - Ativa/desativa o limite diario de comandos.\n`,
                 msgs: {
                     qtd_invalida: "⚠️ A quantidade de comandos por dia está inválida",
                     ativado: "✅ O Limite diário de comandos foi ativado com sucesso",
@@ -1360,16 +1371,16 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}admin* - Exibe o menu de administração do bot.\n`,
                 msgs: {}
             },
-            tipocomandos: {
+            tipcom9k7df: {
                 descricao: '',
-                guia: `Ex: *${prefixo}tipocomandos* comum 70 - Altera o limite diário de comandos do usuário *COMUM* para 70/dia.\n\n`+
-                `*Obs*: O comando de *${prefixo}limitediario* deve estar ativado.\n`+
+                guia: `Ex: *${prefixo}tipcom9k7df* comum 70 - Altera o limite diário de comandos do usuário *COMUM* para 70/dia.\n\n`+
+                `*Obs*: O comando de *${prefixo}lid56k8* deve estar ativado.\n`+
                 `*Obs²*: Verifique os tipos disponíveis de usuários em *${prefixo}tipos*.\n`+
                 `*Obs³*: Para ficar sem limite de comandos digite -1 no campo de limite.\n`,
                 msgs: {
                     invalido: "⚠️ O número para definir o limite de comandos é inválido",
                     tipo_invalido: "⚠️ O tipo de usuário que você inseriu é inválido, verifique os tipos disponíveis em "+`*${prefixo}tipos*`,
-                    erro_limite_diario: "⚠️ Este comando só pode ser usado com o "+`*${prefixo}limitediario*`+" ativado.",
+                    erro_limite_diario: "⚠️ Este comando só pode ser usado com o "+`*${prefixo}lid56k8*`+" ativado.",
                     sucesso: "✅ O limite diário dos usuários do tipo *{p1}* foi definido para *{p2}* comandos/dia "
                 }
             },
@@ -1425,10 +1436,10 @@ export function comandosInfo(botInfo){
             rtodos: {
                 descricao: '',
                 guia: `Ex: *${prefixo}rtodos* - Reseta os comandos diários de todos os usuários.\n\n`+
-                `*Obs*: O comando de *${prefixo}limitediario* deve estar ativado.\n`,
+                `*Obs*: O comando de *${prefixo}lid56k8* deve estar ativado.\n`,
                 msgs: {
                     sucesso: "✅ Os comandos diários de todos os usuários foram resetados",
-                    erro_limite_diario: "⚠️ Este comando só pode ser usado com o "+`*${prefixo}limitediario*`+" ativado."
+                    erro_limite_diario: "⚠️ Este comando só pode ser usado com o "+`*${prefixo}lid56k8*`+" ativado."
                 }
             },
             r: {
@@ -1436,18 +1447,18 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}r* @usuario - Reseta os comandos diários de um usuário mencionado.\n\n`+
                 `Ex: Responder com *${prefixo}r* - Reseta os comandos diários do usuário respondido.\n\n`+
                 `Ex: *${prefixo}r* 55219xxxxxxxx - Reseta os comandos diários do usuário com esse número.\n\n`+
-                `*Obs*: O comando de *${prefixo}limitediario* deve estar ativado.\n`,
+                `*Obs*: O comando de *${prefixo}lid56k8* deve estar ativado.\n`,
                 msgs: {
                     sucesso: "✅ Os comandos diários desse usuário foram resetados",
                     nao_registrado: "⚠️ Este usuário ainda não está registrado",
-                    erro_limite_diario: `⚠️ Este comando só pode ser usado com o *${prefixo}limitediario* ativado.`
+                    erro_limite_diario: `⚠️ Este comando só pode ser usado com o *${prefixo}lid56k8* ativado.`
                 }
             },
-            verdados: {
+            details78k3: {
                 descricao: '',
-                guia: `Ex: *${prefixo}verdados* @usuario - Mostra os dados gerais do usuário mencionado.\n\n`+
-                `Ex: Responder com *${prefixo}verdados* - Mostra os dados gerais do usuário respondido.\n\n`+
-                `Ex: *${prefixo}verdados* 55219xxxxxxxx - Mostra os dados gerais do usuário com esse número.\n`,
+                guia: `Ex: *${prefixo}details78k3* @usuario - Mostra os dados gerais do usuário mencionado.\n\n`+
+                `Ex: Responder com *${prefixo}details78k3* - Mostra os dados gerais do usuário respondido.\n\n`+
+                `Ex: *${prefixo}details78k3* 55219xxxxxxxx - Mostra os dados gerais do usuário com esse número.\n`,
                 msgs: {
                     nao_registrado: "⚠️ Este usuário ainda não está registrado",
                     resposta_superior: "[🤖*VER DADOS DE USO*🤖]\n\n"+

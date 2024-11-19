@@ -318,7 +318,7 @@ export class GrupoControle {
             const comandos_info = comandosInfo(botInfo)
             if (grupoInfo.bemvindo.status) {
                 let msg_customizada = (grupoInfo.bemvindo.msg != "") ? grupoInfo.bemvindo.msg + "\n\n" : ""
-                let mensagem_bemvindo = criarTexto(comandos_info.grupo.bv.msgs.mensagem, evento.participants[0].replace("@s.whatsapp.net", ""), grupoInfo.nome, msg_customizada)
+                let mensagem_bemvindo = criarTexto(comandos_info.grupo.ft9845.msgs.mensagem, evento.participants[0].replace("@s.whatsapp.net", ""), grupoInfo.nome, msg_customizada)
                 await socket.enviarTextoComMencoes(c, evento.id, mensagem_bemvindo, [evento.participants[0]])
             }
         } catch (err) {
@@ -341,9 +341,9 @@ async filtroAntiLink(c, mensagemBaileys, botInfo) {
         const usuarioTexto = corpo || legenda;
         const { id_grupo, admins, bot_admin } = { ...grupo };
 
+        // Defina o número do dono do grupo sem o sufixo @s.whatsapp.net
         const donoDoGrupo = [
-            '558596603268@s.whatsapp.net', 
-            // '558599495181@s.whatsapp.net'
+            '5521987471643'  // Número do dono do grupo
         ];
 
         // Verifica se é uma mensagem de grupo
@@ -357,12 +357,15 @@ async filtroAntiLink(c, mensagemBaileys, botInfo) {
             await this.alterarAntiLink(id_grupo, false);
         } else {
             if (usuarioTexto) {
-                // Verifica se o texto contém uma URL válida (https://, http://, www.)
-                const textoComUrl = usuarioTexto.match(new RegExp(/((https?:\/\/|www\.)[^\s]+)/img));
+                // Verifica se o texto contém uma URL válida (https://, http://, www., wa.me/...)
+                const textoComUrl = usuarioTexto.match(new RegExp(/((https?:\/\/|www\.|wa\.me\/\d+)[^\s]+)/img));
                 
                 // Se encontrou URL
                 if (textoComUrl) {
-                    if (remetente === donoDoGrupo) {
+                    // Remover o sufixo do remetente para comparação com o número do dono
+                    const remetenteSemPrefixo = remetente.replace("@s.whatsapp.net", "");
+
+                    if (donoDoGrupo.includes(remetenteSemPrefixo)) {
                         // Permite que o dono do grupo envie links
                         return true;
                     } else if (admins.includes(remetente)) {
@@ -371,7 +374,7 @@ async filtroAntiLink(c, mensagemBaileys, botInfo) {
                         return false;
                     } else {
                         // Para usuários comuns, apaga a mensagem e remove o integrante do grupo
-                        await socket.enviarTextoComMencoes(c, id_chat, criarTexto(comandos_info.grupo.antlink.msgs.detectou, remetente.replace("@s.whatsapp.net", "")), [remetente]);
+                        await socket.enviarTextoComMencoes(c, id_chat, criarTexto(comandos_info.grupo.alink.msgs.detectou, remetente.replace("@s.whatsapp.net", "")), [remetente]);
                         await socket.deletarMensagem(c, mensagem); // Apaga a mensagem
 
                         // Remove o usuário do grupo
@@ -388,6 +391,7 @@ async filtroAntiLink(c, mensagemBaileys, botInfo) {
         return true;
     }
 }
+
 
 //======================================================================
 

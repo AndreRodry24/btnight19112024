@@ -140,7 +140,7 @@ export const admin = async(c, mensagemBaileys, botInfo) => {
                 }
                 break
 
-            case "bcmdglobal":
+            case "bcglb5667":
                 try{
                     if(!args.length) return await socket.responderTexto(c, id_chat, erroComandoMsg(comando, botInfo) ,mensagem)
                     let usuarioComandos = args, respostaBloqueio = await bot.bloquearComandosGlobal(usuarioComandos, botInfo)
@@ -287,15 +287,15 @@ export const admin = async(c, mensagemBaileys, botInfo) => {
                 }
                 break
 
-            case "limitediario":
+            case "lid56k8":
                 try{
                     let novoEstado = !botInfo.limite_diario.status
                     if(novoEstado){
                         await bot.alterarLimiteDiario(true, botInfo)
-                        await socket.responderTexto(c, id_chat, comandos_info.admin.limitediario.msgs.ativado, mensagem)
+                        await socket.responderTexto(c, id_chat, comandos_info.admin.lid56k8.msgs.ativado, mensagem)
                     } else {
                         await bot.alterarLimiteDiario(false, botInfo)
-                        await socket.responderTexto(c, id_chat, comandos_info.admin.limitediario.msgs.desativado, mensagem)
+                        await socket.responderTexto(c, id_chat, comandos_info.admin.lid56k8.msgs.desativado, mensagem)
                     } 
                 } catch(err){
                     throw err
@@ -371,11 +371,11 @@ export const admin = async(c, mensagemBaileys, botInfo) => {
             case "novotipo":
                 try{
                     if(!args.length) return await socket.responderTexto(c, id_chat, erroComandoMsg(comando, botInfo), mensagem)
-                    let [tipoUsuario, tipoTitulo, tipoComandos] = texto_recebido.split(",").map(arg => {return arg.trim()})
-                    if(!tipoUsuario || !tipoTitulo || !tipoComandos) return await socket.responderTexto(c, id_chat, erroComandoMsg(comando, botInfo), mensagem)
-                    if(tipoComandos != -1 && (isNaN(tipoComandos) || tipoComandos < 10)) return await socket.responderTexto(c, id_chat, comandos_info.admin.novotipo.msgs.erro_comandos, mensagem) 
-                    const sucesso = await bot.adicionarTipoUsuario(botInfo, tipoUsuario, tipoTitulo, tipoComandos)
-                    if(sucesso) await socket.responderTexto(c, id_chat, criarTexto(comandos_info.admin.novotipo.msgs.sucesso_criacao, tipoUsuario.toLowerCase().replaceAll(" ", ''), tipoTitulo, tipoComandos == -1 ? "Sem limite" : tipoComandos), mensagem)
+                    let [tipoUsuario, tipoTitulo, tipcom9k7df] = texto_recebido.split(",").map(arg => {return arg.trim()})
+                    if(!tipoUsuario || !tipoTitulo || !tipcom9k7df) return await socket.responderTexto(c, id_chat, erroComandoMsg(comando, botInfo), mensagem)
+                    if(tipcom9k7df != -1 && (isNaN(tipcom9k7df) || tipcom9k7df < 10)) return await socket.responderTexto(c, id_chat, comandos_info.admin.novotipo.msgs.erro_comandos, mensagem) 
+                    const sucesso = await bot.adicionarTipoUsuario(botInfo, tipoUsuario, tipoTitulo, tipcom9k7df)
+                    if(sucesso) await socket.responderTexto(c, id_chat, criarTexto(comandos_info.admin.novotipo.msgs.sucesso_criacao, tipoUsuario.toLowerCase().replaceAll(" ", ''), tipoTitulo, tipcom9k7df == -1 ? "Sem limite" : tipcom9k7df), mensagem)
                     else await socket.responderTexto(c, id_chat, comandos_info.admin.novotipo.msgs.erro_criacao, mensagem)
                 } catch(err){
                     throw err
@@ -408,15 +408,15 @@ export const admin = async(c, mensagemBaileys, botInfo) => {
                 }
                 break
             
-            case "tipocomandos":
+            case "tipcom9k7df":
                 try{
-                    if(!botInfo.limite_diario.status) return await socket.responderTexto(c, id_chat, comandos_info.admin.tipocomandos.msgs.erro_limite_diario, mensagem)
+                    if(!botInfo.limite_diario.status) return await socket.responderTexto(c, id_chat, comandos_info.admin.tipcom9k7df.msgs.erro_limite_diario, mensagem)
                     if(args.length < 2) return await socket.responderTexto(c, id_chat, erroComandoMsg(comando, botInfo), mensagem)
                     let [tipo, qtd] = args
-                    if(qtd != -1) if(isNaN(qtd) || qtd < 5) return await socket.responderTexto(c, id_chat, comandos_info.admin.tipocomandos.msgs.invalido, mensagem)
+                    if(qtd != -1) if(isNaN(qtd) || qtd < 5) return await socket.responderTexto(c, id_chat, comandos_info.admin.tipcom9k7df.msgs.invalido, mensagem)
                     let alterou = await bot.alterarComandosTipoUsuario(tipo.toLowerCase(), parseInt(qtd), botInfo)
-                    if(!alterou) return await socket.responderTexto(c, id_chat, comandos_info.admin.tipocomandos.msgs.tipo_invalido, mensagem)
-                    await socket.responderTexto(c, id_chat, criarTexto(comandos_info.admin.tipocomandos.msgs.sucesso, tipo.toUpperCase(), qtd == -1 ? "∞" : qtd), mensagem)
+                    if(!alterou) return await socket.responderTexto(c, id_chat, comandos_info.admin.tipcom9k7df.msgs.tipo_invalido, mensagem)
+                    await socket.responderTexto(c, id_chat, criarTexto(comandos_info.admin.tipcom9k7df.msgs.sucesso, tipo.toUpperCase(), qtd == -1 ? "∞" : qtd), mensagem)
                 } catch(err){
                     throw err
                 }
@@ -519,7 +519,7 @@ export const admin = async(c, mensagemBaileys, botInfo) => {
                 }
                 break  
                 
-            case "verdados":
+            case "details78k3":
                 try{
                     let idUsuario
                     if(mensagem_citada) idUsuario = citacao.remetente
@@ -527,36 +527,36 @@ export const admin = async(c, mensagemBaileys, botInfo) => {
                     else if(args.length) idUsuario =  texto_recebido.replace(/\W+/g,"")+"@s.whatsapp.net"
                     else return await socket.responderTexto(c, id_chat, erroComandoMsg(comando, botInfo),mensagem)
                     let usuarioRegistrado = await usuarios.verificarRegistro(idUsuario)
-                    if (!usuarioRegistrado) return await socket.responderTexto(c, id_chat, comandos_info.admin.verdados.msgs.nao_registrado, mensagem)
+                    if (!usuarioRegistrado) return await socket.responderTexto(c, id_chat, comandos_info.admin.details78k3.msgs.nao_registrado, mensagem)
                     let dadosUsuario = await usuarios.obterDadosUsuario(idUsuario)
                     let maxComandosDia = botInfo.limite_diario.limite_tipos[dadosUsuario.tipo].comandos ?? "Sem limite"
                     let tipoUsuario = botInfo.limite_diario.limite_tipos[dadosUsuario.tipo].titulo 
                     let nomeUsuario =  dadosUsuario.nome || "Ainda não obtido"
-                    let resposta = criarTexto(comandos_info.admin.verdados.msgs.resposta_superior, nomeUsuario, tipoUsuario, dadosUsuario.id_usuario.replace("@s.whatsapp.net",""))
-                    if(botInfo.limite_diario.status) resposta += criarTexto(comandos_info.admin.verdados.msgs.resposta_variavel.limite_diario.on, dadosUsuario.comandos_dia, maxComandosDia, maxComandosDia)
-                    resposta += criarTexto(comandos_info.admin.verdados.msgs.resposta_inferior, dadosUsuario.comandos_total)
+                    let resposta = criarTexto(comandos_info.admin.details78k3.msgs.resposta_superior, nomeUsuario, tipoUsuario, dadosUsuario.id_usuario.replace("@s.whatsapp.net",""))
+                    if(botInfo.limite_diario.status) resposta += criarTexto(comandos_info.admin.details78k3.msgs.resposta_variavel.limite_diario.on, dadosUsuario.comandos_dia, maxComandosDia, maxComandosDia)
+                    resposta += criarTexto(comandos_info.admin.details78k3.msgs.resposta_inferior, dadosUsuario.comandos_total)
                     await socket.responderTexto(c, id_chat, resposta, mensagem)
                 } catch(err){
                     throw err
                 }
                 break
                      
-            case 'bcgrupos':
+            case 'anugp78kfy':
                 try{
                     if(!args.length) return await socket.responderTexto(c, id_chat, erroComandoMsg(comando, botInfo), mensagem)
                     let anuncioMensagem = texto_recebido, gruposAtuais = await grupos.obterTodosGruposInfo()
-                    await socket.responderTexto(c, id_chat, criarTexto(comandos_info.admin.bcgrupos.msgs.espera, gruposAtuais.length, gruposAtuais.length) , mensagem)
+                    await socket.responderTexto(c, id_chat, criarTexto(comandos_info.admin.anugp78kfy.msgs.espera, gruposAtuais.length, gruposAtuais.length) , mensagem)
                     for (let grupo of gruposAtuais) {
                         if (!grupo.restrito_msg) {
                             await new Promise((resolve)=>{
                                 setTimeout(async ()=>{
-                                    await socket.enviarTexto(c, grupo.id_grupo, criarTexto(comandos_info.admin.bcgrupos.msgs.anuncio, anuncioMensagem)).catch(()=>{})
+                                    await socket.enviarTexto(c, grupo.id_grupo, criarTexto(comandos_info.admin.anugp78kfy.msgs.anuncio, anuncioMensagem)).catch(()=>{})
                                     resolve()
                                 }, 1000)
                             })
                         }
                     }
-                    await socket.responderTexto(c, id_chat, comandos_info.admin.bcgrupos.msgs.bc_sucesso , mensagem)
+                    await socket.responderTexto(c, id_chat, comandos_info.admin.anugp78kfy.msgs.bc_sucesso , mensagem)
                 } catch(err){
                     throw err
                 }

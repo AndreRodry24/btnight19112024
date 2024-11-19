@@ -173,7 +173,7 @@ export class BotControle{
         const comandos_info = comandosInfo(botInfo)
         const {prefixo} = botInfo
         let comandosBloqueados = []
-        let respostaBloqueio = comandos_info.admin.bcmdglobal.msgs.resposta_titulo
+        let respostaBloqueio = comandos_info.admin.bcglb5667.msgs.resposta_titulo
         let categorias = ['figurinhas', 'utilidades', 'downloads', 'diversao']
 
         if(categorias.includes(usuarioComandos[0])) usuarioComandos = Object.keys(comandos_info[usuarioComandos[0]]).map(comando => prefixo+comando)
@@ -181,15 +181,15 @@ export class BotControle{
         for(let comando of usuarioComandos){
             if(verificarComandoExiste(botInfo, comando, 'utilidades') || verificarComandoExiste(botInfo, comando, 'diversao') || verificarComandoExiste(botInfo, comando, 'figurinhas') || verificarComandoExiste(botInfo, comando, 'downloads')){
                 if(botInfo.bloqueio_cmds.includes(comando.replace(prefixo, ''))){
-                    respostaBloqueio += criarTexto(comandos_info.admin.bcmdglobal.msgs.resposta_variavel.ja_bloqueado, comando)
+                    respostaBloqueio += criarTexto(comandos_info.admin.bcglb5667.msgs.resposta_variavel.ja_bloqueado, comando)
                 } else {
                     comandosBloqueados.push(comando.replace(prefixo, ''))
-                    respostaBloqueio += criarTexto(comandos_info.admin.bcmdglobal.msgs.resposta_variavel.bloqueado_sucesso, comando)
+                    respostaBloqueio += criarTexto(comandos_info.admin.bcglb5667.msgs.resposta_variavel.bloqueado_sucesso, comando)
                 }
             } else if (verificarComandoExiste(botInfo, comando, 'grupo') || verificarComandoExiste(botInfo, comando, 'admin') || verificarComandoExiste(botInfo, comando, 'info') ){
-                respostaBloqueio += criarTexto(comandos_info.admin.bcmdglobal.msgs.resposta_variavel.erro, comando)
+                respostaBloqueio += criarTexto(comandos_info.admin.bcglb5667.msgs.resposta_variavel.erro, comando)
             } else {
-                respostaBloqueio += criarTexto(comandos_info.admin.bcmdglobal.msgs.resposta_variavel.nao_existe, comando)
+                respostaBloqueio += criarTexto(comandos_info.admin.bcglb5667.msgs.resposta_variavel.nao_existe, comando)
             }
         }
         

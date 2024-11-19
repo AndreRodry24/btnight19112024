@@ -2841,9 +2841,9 @@ nyro@^1.0.0:
     https-proxy-agent "^7.0.5"
 
 nyro@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/nyro/-/nyro-2.0.0.tgz#e620d18e6dfd8cb573ea846fbe9b61cab7a49b60"
-  integrity sha512-419b0tcMsHVvp5hkr7Z2kr/ek9+Wa9x8pgo4McX6eKT5UuK/v/COe1zG26lyR59r98jX6gLbbiefaJVQ1Ochwg==
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/nyro/-/nyro-2.0.3.tgz#a05016ee7fba817d78fbf2c4e0f47d94ca34b468"
+  integrity sha512-sz0cymKdTNNHcIiA13Q7luL+TneiuFitdTz6Yja9adPig/unyeDcsMtL89tkA+whJBAlxlDmSelUovvuM6zqJQ==
   dependencies:
     fastgate "^6.1.0"
     http "^0.0.1-security"
@@ -3218,9 +3218,9 @@ qrcode-terminal@^0.12.0:
   integrity sha512-EXtzRZmC+YGmGlDFbXKxQiMZNwCLEO6BANKXG4iCtSIM0yqc/pappSx3RIKr4r0uh5JsBckOXeKrB3Iz7mdQpQ==
 
 qs@^6.12.0, qs@^6.13.0:
-  version "6.13.0"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.13.0.tgz#6ca3bd58439f7e245655798997787b0d88a51906"
-  integrity sha512-+38qI9SOr8tfZ4QmJNplMUxqjbe7LKvvZgWdExBOmd+egZTtjLB67Gu0HRX3u/XOq7UU2Nx6nsjvS16Z9uwfpg==
+  version "6.13.1"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.13.1.tgz#3ce5fc72bd3a8171b85c99b93c65dd20b7d1b16e"
+  integrity sha512-EJPeIn0CYrGu+hli1xilKAPXODtJ12T0sP63Ijx2/khC2JtuaN3JyNIpvmnkmaEtha9ocbG4A4cMcr+TvqvwQg==
   dependencies:
     side-channel "^1.0.6"
 
@@ -3712,9 +3712,9 @@ undici-types@~6.19.8:
   integrity sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==
 
 undici@^6.11.1, undici@^6.19.5:
-  version "6.20.1"
-  resolved "https://registry.yarnpkg.com/undici/-/undici-6.20.1.tgz#fbb87b1e2b69d963ff2d5410a40ffb4c9e81b621"
-  integrity sha512-AjQF1QsmqfJys+LXfGTNum+qw4S88CojRInG/6t31W/1fk6G59s92bnAvGz5Cmur+kQv2SURXEvvudLmbrE8QA==
+  version "6.21.0"
+  resolved "https://registry.yarnpkg.com/undici/-/undici-6.21.0.tgz#4b3d3afaef984e07b48e7620c34ed8a285ed4cd4"
+  integrity sha512-BUgJXc752Kou3oOIuU1i+yZZypyZRqNPW0vqoMPl8VaoalSfeR0D8/t4iAS3yirs79SSMTxTag+ZC86uswv+Cw==
 
 undici@five:
   version "5.28.4"
@@ -3776,9 +3776,9 @@ url@0.11.0:
     querystring "0.2.0"
 
 user-agents@^1.1.225, user-agents@^1.1.231:
-  version "1.1.356"
-  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.1.356.tgz#9f83e63eab4d3ecdfff3c9bdddfc8704f7f17327"
-  integrity sha512-d5FvdyMgs1TkiHKLrPHvFzwr9ph6QRbZOwVibQKCsUTzEKzl4OEvPB7oH0BAixEbFqOLIfWFFBfazpbURK1beA==
+  version "1.1.362"
+  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.1.362.tgz#008b2cb15d3b4395dc74081c869d25b758d8c69e"
+  integrity sha512-mwDzPkR3IZswVYotnQJU4t/H56K0QBWGlkr3eDPHPzMYiUkxZCFICU1n4H3OHUN2QHVHsdlRpDMbsi39hhvvMg==
   dependencies:
     lodash.clonedeep "^4.5.0"
 

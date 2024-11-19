@@ -23,14 +23,14 @@ export const downloads = async(c, mensagemBaileys, botInfo) => {
     //Comandos de downloads
     try{
         switch(comandoSemPrefixo){      
-            case "play":
+            case "dmusic":
                 try{
                     if(!args.length) return await socket.responderTexto(c, id_chat,erroComandoMsg(comando, botInfo),mensagem)
                     let usuarioTexto = texto_recebido
                     const {resultado: resultadoInfoVideo} = await api.Downloads.obterInfoVideoYT(usuarioTexto)
-                    if(resultadoInfoVideo.isLiveContent) return await socket.responderTexto(c, id_chat, comandos_info.downloads.play.msgs.erro_live,mensagem)
-                    else if (resultadoInfoVideo.lengthSeconds > 300) return await socket.responderTexto(c, id_chat, comandos_info.downloads.play.msgs.limite, mensagem)
-                    const mensagemEspera = criarTexto(comandos_info.downloads.play.msgs.espera, resultadoInfoVideo.title, resultadoInfoVideo.durationFormatted)
+                    if(resultadoInfoVideo.isLiveContent) return await socket.responderTexto(c, id_chat, comandos_info.downloads.dmusic.msgs.erro_live,mensagem)
+                    else if (resultadoInfoVideo.lengthSeconds > 300) return await socket.responderTexto(c, id_chat, comandos_info.downloads.dmusic.msgs.limite, mensagem)
+                    const mensagemEspera = criarTexto(comandos_info.downloads.dmusic.msgs.espera, resultadoInfoVideo.title, resultadoInfoVideo.durationFormatted)
                     await socket.responderTexto(c, id_chat, mensagemEspera, mensagem)
                     const {resultado : resultadoYTMP3} = await api.Downloads.obterYTMP3(usuarioTexto)
                     await socket.responderArquivoBuffer(c, tiposMensagem.audio, id_chat, resultadoYTMP3, '', mensagem, 'audio/mpeg')
